@@ -1,20 +1,25 @@
 function config ($stateProvider, $urlRouterProvider) {
 
   $stateProvider
-    .state('home', {
+
+    .state('root', {
+      abstract: true,
+      templateUrl: 'templates/layout.tpl.html'
+    })
+    .state('root.home', {
       url: '/',
       templateUrl: 'templates/home.tpl.html',
       controller: 'HomeController'
     })
-    .state('about', {
+    .state('root.about', {
       url: '/about',
       templateUrl: 'templates/about.tpl.html'
     })
-    .state('contact', {
+    .state('root.contact', {
       url: '/contact',
       templateUrl: 'templates/contact.tpl.html'
     })
-    .state('add', {
+    .state('root.add', {
       url: '/add',
       templateUrl: 'templates/add.tpl.html',
       controller: 'AddController'
