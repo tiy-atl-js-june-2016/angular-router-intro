@@ -1,3 +1,8 @@
 <h1 class="title">Home Page</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto minus ea repellendus at. Et nisi ipsam repudiandae, dolorem, blanditiis, veniam cumque dignissimos, quia tempora voluptates dolore culpa ut incidunt iusto.</p>
+<ul>
+  <li ng-repeat="gif in gifs">
+    <h4>{{ gif.name }}</h4>
+    <img ng-src="{{ gif.url }}" alt="{{ gif.name }}">
+  </li>
+</ul>

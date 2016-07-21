@@ -1,8 +1,16 @@
-function HomeController () {
+function HomeController ($scope, $http, SERVER) {
 
-  console.log('Home Controller');
+  $scope.gifs = [];
+
+  init();
+
+  function init () {
+    $http.get(SERVER.URL).then( (res) => {
+      $scope.gifs = res.data;
+    });
+  }
 
 }
 
-HomeController.$inject = [];
+HomeController.$inject = ['$scope', '$http', 'SERVER'];
 export { HomeController };

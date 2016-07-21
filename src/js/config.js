@@ -24,5 +24,6 @@ function config ($stateProvider, $urlRouterProvider) {
 
 }
 
+
 config.$inject = ['$stateProvider', '$urlRouterProvider'];
 export { config };
