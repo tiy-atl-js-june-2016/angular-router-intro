@@ -4,6 +4,7 @@ function config ($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/',
       templateUrl: 'templates/home.tpl.html',
+      controller: 'HomeController'
     })
     .state('about', {
       url: '/about',
