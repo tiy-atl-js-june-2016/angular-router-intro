@@ -3,15 +3,20 @@ function config ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/',
-      template: 'Hello Home State'
+      templateUrl: 'templates/home.tpl.html',
     })
     .state('about', {
       url: '/about',
-      template: 'Hello About State'
+      templateUrl: 'templates/about.tpl.html'
     })
     .state('contact', {
       url: '/contact',
-      template: 'Hello Contact State'
+      templateUrl: 'templates/contact.tpl.html'
+    })
+    .state('add', {
+      url: '/add',
+      templateUrl: 'templates/add.tpl.html',
+      controller: 'AddController'
     });
 
   $urlRouterProvider.otherwise('/');
